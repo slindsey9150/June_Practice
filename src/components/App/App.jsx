@@ -19,6 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import ButtonsPage from '../ButtonsPage/ButtonsPage';
 
 import './App.css';
 
@@ -40,6 +41,13 @@ function App() {
           <Redirect exact from="/" to="/home" />
 
           {/* Visiting localhost:5173/about will show the about page. */}
+          <Route
+            // shows ButtonPage
+            exact
+            path="/buttons"
+          >
+            <ButtonsPage />
+          </Route>
           <Route
             // shows AboutPage at all times (logged in or not)
             exact
